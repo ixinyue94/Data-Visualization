@@ -8,9 +8,10 @@ sns.set(font='SimHei')
 
 df = pd.read_csv('热力图数据示例.csv', engine='python')
 flights = df.pivot(index='A',columns='B',values='VALUE')
-f, ax = plt.subplots(figsize=(9,6)) #更改输出图片长宽
-pic = sns.heatmap(flights,cmap='YlOrRd',linewidths=0.5, square=True).invert_yaxis() #反转y轴,改图片属性
-ax.set(xlabel = 'B', ylabel= 'A') #加轴标题
-ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
 
-plt.show(pic)
+f, ax = plt.subplots(figsize=(9,6)) #新建画布，更改画布长宽
+pic = sns.heatmap(flights,cmap='YlOrRd',linewidths=0.5, square=True).invert_yaxis() #反转y轴标签顺序,改图片属性
+ax.set(xlabel = 'B', ylabel= 'A') #加轴标题
+ax.set_yticklabels(ax.get_yticklabels(), rotation=0) #旋转y轴标签文字
+
+plt.show()
