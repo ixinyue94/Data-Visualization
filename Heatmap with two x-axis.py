@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(font='SimHei')
 
-df = pd.read_csv('热力图数据示例.csv', engine='python')
+df = pd.read_csv('Example Data.csv', engine='python')
 flights = df.pivot(index='A',columns='B',values='VALUE')
 
 c = []
