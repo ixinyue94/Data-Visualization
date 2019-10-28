@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(font='SimHei')
 
-df = pd.read_csv('热力图数据示例.csv', engine='python')
+df = pd.read_csv('Example Data.csv', engine='python')
 flights = df.pivot(index='A',columns='B',values='VALUE')
 
 f, ax = plt.subplots(figsize=(9,6)) #新建画布，更改画布长宽
